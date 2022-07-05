@@ -10,7 +10,7 @@ def get_current_language():
 
 
 def get_localization(key: str) -> str:
-    if get_current_language() in ["pl_pl", "pl", "Polish_Poland"]:
+    if get_current_language() in ["pl_pl", "pl", "polish_poland"]:
         bank_key = "pl"
     else:
         bank_key = "en"
