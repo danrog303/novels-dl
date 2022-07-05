@@ -1,7 +1,10 @@
 # novels-dl
+![CI](https://github.com/danrog303/novels-dl/actions/workflows/tests.yml/badge.svg)
 ![Activity](https://shields.io/github/last-commit/danrog303/novels-dl)
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20📝%20🏗️-FFDD67.svg)
 > Aplikacja do pobierania light novel ze strony https://novelki.pl/ w postaci plików epub.
+
+Angielska wersja pliku readme 🇬🇧 [jest dostępna tutaj](https://github.com/danrog303/novels-dl/blob/main/README.md). 
 
 ## 📝 Cel projektu
 Strona https://novelki.pl/ zawiera wiele interesujących książek, ale jej ogromną wadą jest fakt, iż pozwala wyłącznie na

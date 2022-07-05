@@ -1,7 +1,11 @@
 # novels-dl
+![CI](https://github.com/danrog303/novels-dl/actions/workflows/tests.yml/badge.svg)
 ![Activity](https://shields.io/github/last-commit/danrog303/novels-dl)
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20📝%20🏗️-FFDD67.svg)
-> Ebook downloading tool for polish light novel website named novelki.pl 
+> Ebook downloading tool for polish light novel website named novelki.pl
+
+Polish version of readme file 🇵🇱 [is available here](https://github.com/danrog303/novels-dl/blob/main/README.pl.md). 
+
 
 ## 📝 Purpose of the project
 Website https://novelki.pl/ contains many interesting books, but its huge drawback is that it only allows you to
