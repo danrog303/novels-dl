@@ -1,0 +1,3 @@
+from novels_dl.localization.get_localization import get_localization
+from novels_dl.localization.get_localization import get_current_language
+from novels_dl.localization.localization_entries import localization_entries
