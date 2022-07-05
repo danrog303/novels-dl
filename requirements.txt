@@ -1,0 +1,10 @@
+beautifulsoup4==4.11.1
+certifi==2022.6.15
+charset-normalizer==2.1.0
+colorama==0.4.5
+idna==3.3
+Pillow==9.2.0
+pip-autoremove==0.10.0
+requests==2.28.1
+soupsieve==2.3.2.post1
+urllib3==1.26.9
