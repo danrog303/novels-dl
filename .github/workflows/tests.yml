@@ -25,4 +25,4 @@ jobs:
           NOVELS_DL_EMAIL: ${{ secrets.NOVELS_DL_EMAIL }}
           NOVELS_DL_PASSWORD: ${{ secrets.NOVELS_DL_PASSWORD }}
         run: |
-          python -m unittest
+          python -m unittest --verbose
