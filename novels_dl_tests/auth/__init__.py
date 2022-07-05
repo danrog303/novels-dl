@@ -1,0 +1,1 @@
+from novels_dl_tests.auth.test_authentication_client import TestAuthenticationClient
