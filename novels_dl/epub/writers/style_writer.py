@@ -26,8 +26,8 @@ class StyleWriter(Writer):
             file_rewrite(main_css, css_content)
 
         if self.ctx.epub_options.convert_quotes_to_hyphens:
-            for chapter_path in iglob(os.path.join("tmp", "text", "*.html")):
-                print(get_localization("STYLE_WRITER_REPLACING_QUOTES") + chapter_path)
+            for chapter_path in iglob(os.path.join(self.ctx.working_tempdir, "text", "*.html")):
+                self.ctx.logger(get_localization("STYLE_WRITER_REPLACING_QUOTES") + chapter_path)
                 with open(chapter_path, "r+", encoding="UTF-8") as chapter_file:
                     chapter_builder = StringIO()
                     for line in chapter_file.readlines():
