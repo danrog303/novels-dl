@@ -1,4 +1,5 @@
 import os
+from novels_dl.assets.get_asset import get_asset
 from novels_dl.epub.writers import Writer
 from novels_dl.fetch import ChapterFetch
 from novels_dl.utils import file_rewrite
@@ -9,13 +10,12 @@ class ChapterWriter(Writer):
     """Fetches and saves all novel chapters. Adds downloaded chapters to table of contents."""
 
     def write(self):
-        cur_dir = os.path.dirname(os.path.realpath(__file__))
-        template_dir = os.path.join(cur_dir, "../template")
-
         self.ctx.logger(get_localization("CHAPTER_WRITER_BEGIN"))
         text_declarations = ""
         text_id_declarations = ""
         nav_point_declarations = ""
+
+        template_dir = get_asset("epub_template")
 
         with open(os.path.join(template_dir, "page-template.html"), "r") as page_template:
             page_template = page_template.read()

@@ -5,6 +5,7 @@ from PIL import Image
 from io import StringIO
 from glob import iglob
 from novels_dl.epub.writers import Writer
+from novels_dl.assets import get_asset
 from novels_dl.localization import get_localization
 from novels_dl.utils import file_rewrite
 
@@ -33,7 +34,7 @@ class ImageWriter(Writer):
                         del response
                         del image
                     except Exception as exc:
-                        template_path = os.path.join(self.ctx.working_tempdir, "image-error.jpeg")
+                        template_path = get_asset("epub_template", "image-error.jpeg")
                         target_path = os.path.join(self.ctx.working_tempdir, "images", f"image-{image_counter}.jpeg")
                         shutil.copy(template_path, target_path)
                         self.ctx.logger(get_localization("IMAGE_WRITER_ERR"))
