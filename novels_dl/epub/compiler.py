@@ -23,5 +23,11 @@ class EpubCompiler:
             self.ctx.epub_output_path = os.path.join(directory, stem)
 
     def compile(self):
-        shutil.make_archive(self.ctx.epub_output_path, 'zip', self.ctx.working_tempdir)
-        shutil.move(f"{self.ctx.epub_output_path}.zip", f"{self.ctx.epub_output_path}.epub")
+        # Add volume info if compiled ebook has multiple volumes:
+        if self.ctx.downloading_novel.volume is None:
+            out_path = self.ctx.epub_output_path
+        else:
+            out_path = f"{self.ctx.epub_output_path}-{self.ctx.downloading_novel.volume}"
+
+        shutil.make_archive(out_path, 'zip', self.ctx.working_tempdir)
+        shutil.move(f"{out_path}.zip", f"{out_path}.epub")

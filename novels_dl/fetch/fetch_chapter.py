@@ -7,7 +7,8 @@ from novels_dl.models import NovelChapter
 
 
 class ChapterFetch(Fetch):
-    """Allows to fetch chapter data by specifying chapter's URL code."""
+    """Allows to fetch full chapter data by specifying chapter's URL code.
+    Gets both chapter metadata and chapter HTML content."""
 
     def fetch_chapter(self, chapter_url_code: str) -> Optional[NovelChapter]:
         chapter_endpoint = f"https://novelki.pl/api/reader/chapters/{chapter_url_code}"

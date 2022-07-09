@@ -17,6 +17,7 @@ z programu Calibre.
 - Obsługa logowania (novelki.pl wymaga zalogowania się, aby pobrać treść jakiejkolwiek light novel)
 - Lokalizacja (w zależności od języka systemowego, skrypt będzie wyświetlał informacje po angielsku lub po polsku)
 - Generowanie e-booka w postaci pliku .epub
+- Możliwość wygenerowania osobnego pliku .epub dla każdego tomu
 - Pobieranie podstawowych metadanych i osadzanie ich w pliku .epub
 - Pobieranie obrazu okładki i osadzanie jej w pliku .epub
 - Generowanie spisu treści osadzonego w pliku .epub

@@ -1,15 +1,15 @@
 import json
 from collections import deque
-from typing import Optional
+from typing import Optional, Collection
 from bs4 import BeautifulSoup
 from novels_dl.fetch import Fetch
-from novels_dl.models import Novel
+from novels_dl.models import Novel, PrefetchedNovelChapter
 
 
 class NovelFetch(Fetch):
     """Allows to fetch novel data by specifying novel's URL code."""
 
-    def _fetch_novel_chapter_url_codes(self, novel_page: BeautifulSoup):
+    def _prefetch_novel_chapters(self, novel_page: BeautifulSoup) -> Collection[PrefetchedNovelChapter]:
         result = deque()
 
         # Obtain chapter url code of some random novel chapter
@@ -23,7 +23,13 @@ class NovelFetch(Fetch):
 
         # Append all fetched toc entries to the result
         for toc_entry in toc_data:
-            result.appendleft(toc_entry["url_code"])
+            prefetched_chapter_data = dict()
+            prefetched_chapter_data["title"] = toc_entry["title"]
+            prefetched_chapter_data["number"] = toc_entry["number"]
+            prefetched_chapter_data["volume"] = toc_entry["volume"]
+            prefetched_chapter_data["url_code"] = toc_entry["url_code"]
+
+            result.appendleft(PrefetchedNovelChapter(**prefetched_chapter_data))
 
         return result
 
@@ -40,6 +46,6 @@ class NovelFetch(Fetch):
         novel_data["name"] = novel_page.select_one("h3").text
         novel_data["author"] = novel_page.select("p.h5 span")[1].text
         novel_data["cover_url"] = "https://novelki.pl" + novel_page.select_one("main#app img")["src"]
-        novel_data["chapter_url_codes"] = self._fetch_novel_chapter_url_codes(novel_page)
+        novel_data["prefetched_chapters"] = self._prefetch_novel_chapters(novel_page)
 
         return Novel(**novel_data)

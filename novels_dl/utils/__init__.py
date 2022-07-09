@@ -1,3 +1,5 @@
 from novels_dl.utils.css_unit_format import css_unit_exists
 from novels_dl.utils.css_unit_format import css_unit_format
 from novels_dl.utils.file_rewrite import file_rewrite
+from novels_dl.utils.draw_tag_on_image import draw_tag_on_image
+from novels_dl.utils.remove_dir_content import remove_dir_content

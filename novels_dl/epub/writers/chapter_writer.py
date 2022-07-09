@@ -20,9 +20,9 @@ class ChapterWriter(Writer):
         with open(os.path.join(template_dir, "page-template.html"), "r") as page_template:
             page_template = page_template.read()
 
-        chapters_count = len(self.ctx.downloading_novel.chapter_url_codes)
-        for chapter_index, chapter_url_code in enumerate(self.ctx.downloading_novel.chapter_url_codes):
-            chapter = ChapterFetch(self.ctx).fetch_chapter(chapter_url_code)
+        chapters_count = len(self.ctx.downloading_novel.prefetched_chapters)
+        for chapter_index, prefetched_chapter_instance in enumerate(self.ctx.downloading_novel.prefetched_chapters):
+            chapter = ChapterFetch(self.ctx).fetch_chapter(prefetched_chapter_instance.url_code)
             chapter_filename = os.path.join(self.ctx.working_tempdir, f"text/part-{chapter_index}.html")
             chapter_ebook_filename = f"text/part-{chapter_index}.html"
             self.ctx.logger(f"{get_localization('CHAPTER_WRITER_ANALYZING')}: {chapter.title} ({chapter_index + 1}/{chapters_count})")
