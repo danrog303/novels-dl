@@ -5,7 +5,7 @@ from novels_dl.localization import get_localization
 from novels_dl.context import ContextManager
 from novels_dl.epub import EpubGenerator
 from novels_dl.interface.cli.steps import cli_authenticate, cli_get_output_path,\
-    cli_initialize_epub_options, cli_prefetch_novel, cli_volume_split
+    cli_initialize_epub_options, cli_prefetch_novel, cli_volume_split, cli_rotate_long_images
 
 
 def cli_entrypoint():
@@ -20,6 +20,7 @@ def cli_entrypoint():
             cli_prefetch_novel(context)
             cli_get_output_path(context)
             cli_initialize_epub_options(context)
+            cli_rotate_long_images(context)
 
             generator = EpubGenerator(context)
             if cli_volume_split(context):

@@ -93,7 +93,16 @@ localization_entries = {
                             "[2] Wygeneruj tyle plików .epub, ile jest tomów light novel",
         "CLI_VOL_SPLIT_WARN": "\nUwaga! Jeśli wybierzesz opcję 2, obraz okładki dla poszczególnych tomów się nie "
                               "zmieni.\nStrona novelki.pl nie udostępnia obrazów okładek dla poszczególnych tomów.\n"
-                              "Dla rozróżnienia, na każdą z okładek zostanie naniesiony prostokąt z numerem tomu.\n"
+                              "Dla rozróżnienia, na każdą z okładek zostanie naniesiony prostokąt z numerem tomu.\n",
+
+        "CLI_ROTATE_LONG_ASK": "Czy chcesz włączyć obracanie długich ilustracji?\n"
+                               "[1] Zostaw ilustracje bez zmian\n"
+                               "[2] Obracaj ilustracje\n",
+
+        "CLI_ROTATE_LONG_EXPLANATION": "Jeśli włączysz tę opcję, obrazki których szerokość jest większa niż wysokość\n"
+                                       "zostaną obrócone o 90 stopni, tak aby lepiej wykorzystywać ekran e-czytników.",
+
+        "UTIL_CHOOSE_1_2": "Wybierz 1 lub 2: "
     },
 
     "en": {
@@ -192,6 +201,14 @@ localization_entries = {
                              "[2] Generate as many .epub files as there are light novel volumes",
         "CLI_VOL_SPLIT_WARN": "\nWarning: if you select option 2, the cover image for individual volumes will not "
                               "change.\nThe novelki.pl website does not provide cover images for individual volumes.\n"
-                              "For differentiation, a rectangle with volume number will be drawn on each cover image.\n"
+                              "For differentiation, a rectangle with volume number will be drawn on each cover image.\n",
+
+        "CLI_ROTATE_LONG_ASK": "Do you want to enable rotation of long images?\n"
+                               "[1] Leave images unchanged\n"
+                               "[2] Rotate images\n",
+        "CLI_ROTATE_LONG_EXPLANATION": "If you enable this option, images which width is greater than the height\n"
+                                       "will be rotated by 90 degrees to make better use of the e-reader screen.",
+
+        "UTIL_CHOOSE_1_2": "Type 1 or 2: "
     }
 }

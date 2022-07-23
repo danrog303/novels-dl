@@ -4,13 +4,8 @@ from typing import Optional
 class EpubOptions:
     """Stores data about ebook formatting."""
 
-    cover_aspect_ratio: Optional[float] = None
-    """If set, this option will resize cover image to match the specified aspect ratio.
-    (NOT IMPLEMENTED YET)"""
-
     rotate_long_images: bool = False
-    """If set to True, long images will be rotated 90deg to be displayed vertically.
-    (NOT IMPLEMENTED YET)"""
+    """If set to True, long images will be rotated 90deg clockwise (to be displayed vertically on ebook readers)."""
 
     convert_quotes_to_hyphens: bool = False
     """If set to True, all English-styled novels will be converted to Polish style

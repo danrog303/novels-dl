@@ -3,3 +3,4 @@ from novels_dl.interface.cli.steps.cli_authenticate import cli_authenticate
 from novels_dl.interface.cli.steps.cli_get_output_path import cli_get_output_path
 from novels_dl.interface.cli.steps.cli_initialize_epub_options import cli_initialize_epub_options
 from novels_dl.interface.cli.steps.cli_volume_split import cli_volume_split
+from novels_dl.interface.cli.steps.cli_rotate_long_images import cli_rotate_long_images

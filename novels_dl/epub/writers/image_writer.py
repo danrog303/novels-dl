@@ -30,6 +30,10 @@ class ImageWriter(Writer):
                         response = self.ctx.requests.get(image_src, stream=True)
                         image = Image.open(response.raw)
                         image = image.convert('RGB')  # prevents exception when image has transparency
+
+                        if self.ctx.epub_options.rotate_long_images and image.width > image.height:
+                            image = image.rotate(270, expand=True)
+
                         image.save(os.path.join(self.ctx.working_tempdir, "images", f"image-{image_counter}.jpeg"))
                         del response
                         del image
