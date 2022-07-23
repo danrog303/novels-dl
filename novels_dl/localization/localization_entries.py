@@ -65,6 +65,7 @@ localization_entries = {
         "FIX_WRITER_HYPHENS": "Zamieniam minusy na półpauzy w pliku: ",
         "FIX_WRITER_REDUNDANT_BRS": "Kasuję nadmiarowe znaczniki końca linii w pliku: ",
 
+        "IMAGE_WRITER_VOLUME_TAG": "Nałożono oznaczenie tomu na obrazie okładki",
         "IMAGE_WRITER_BEGIN": "Rozpoczynam pobieranie i zapisywanie obrazków.",
         "IMAGE_WRITER_END": "Zakończono pobieranie i zapisywanie obrazków.",
         "IMAGE_WRITER_METADATA": "Zapisuję informacje o obrazkach w metadanych e-booka.",
@@ -79,7 +80,20 @@ localization_entries = {
         "STYLE_WRITER_END": "Zakończono modyfikację wyglądu nowelki.",
         "STYLE_WRITER_INDENTS": "Dodaję metodę oddzielenia paragrafów: wcięcia",
         "STYLE_WRITER_MARGINS": "Dodaję metodę oddzielenia paragrafów: paragrafy blokowe",
-        "STYLE_WRITER_REPLACING_QUOTES": "Podmieniam cudzysłowy na myślniki w pliku: "
+        "STYLE_WRITER_REPLACING_QUOTES": "Podmieniam cudzysłowy na myślniki w pliku: ",
+
+        "GENERATOR_BEGIN_GENERATION": "Rozpoczynam generowanie ebooka: ",
+        "GENERATOR_END_GENERATION": "Zakończono generowanie ebooka: ",
+
+        "GENERATION_BEGIN_MULTIPLE_GENERATIONS": "Rozpoczynam generowanie serii ebooków",
+        "GENERATION_END_MULTIPLE_GENERATIONS": "Zakończono generowanie serii ebooków",
+
+        "CLI_VOL_SPLIT_ASK": "Czy chcesz włączyć dzielenie tomów?\n"
+                            "[1] Wygeneruj jeden duży plik .epub ze wszystkimi tomami light novel\n"
+                            "[2] Wygeneruj tyle plików .epub, ile jest tomów light novel",
+        "CLI_VOL_SPLIT_WARN": "\nUwaga! Jeśli wybierzesz opcję 2, obraz okładki dla poszczególnych tomów się nie "
+                              "zmieni.\nStrona novelki.pl nie udostępnia obrazów okładek dla poszczególnych tomów.\n"
+                              "Dla rozróżnienia, na każdą z okładek zostanie naniesiony prostokąt z numerem tomu.\n"
     },
 
     "en": {
@@ -150,6 +164,7 @@ localization_entries = {
         "FIX_WRITER_HYPHENS": "Fixing typography of hyphens in file: ",
         "FIX_WRITER_REDUNDANT_BRS": "Deleting redundant break line tags in file: ",
 
+        "IMAGE_WRITER_VOLUME_TAG": "Drawn volume tag on the cover image",
         "IMAGE_WRITER_BEGIN": "Starting to download novel images.",
         "IMAGE_WRITER_END": "Finished downloading all images.",
         "IMAGE_WRITER_METADATA": "Saving image information to epub metadata.",
@@ -164,6 +179,19 @@ localization_entries = {
         "STYLE_WRITER_END": "Finished modifying epub CSS.",
         "STYLE_WRITER_INDENTS": "Adding paragraph separation method: indents",
         "STYLE_WRITER_MARGINS": "Adding paragraph separation method: margins",
-        "STYLE_WRITER_REPLACING_QUOTES": "Swapping quotation marks to hyphens in: "
+        "STYLE_WRITER_REPLACING_QUOTES": "Swapping quotation marks to hyphens in: ",
+
+        "GENERATOR_BEGIN_GENERATION": "Starting to generate ebook: ",
+        "GENERATOR_END_GENERATION": "Finished ebook generation: ",
+
+        "GENERATION_BEGIN_MULTIPLE_GENERATIONS": "Starting ebook multiple volumes generation.",
+        "GENERATION_END_MULTIPLE_GENERATIONS": "Finished ebook multiple volumes generation.",
+
+        "CLI_VOL_SPLIT_ASK": "Do you want to enable volume splitting?\n"
+                             "[1] Generate one large .epub file with all the light novel volumes\n"
+                             "[2] Generate as many .epub files as there are light novel volumes",
+        "CLI_VOL_SPLIT_WARN": "\nWarning: if you select option 2, the cover image for individual volumes will not "
+                              "change.\nThe novelki.pl website does not provide cover images for individual volumes.\n"
+                              "For differentiation, a rectangle with volume number will be drawn on each cover image.\n"
     }
 }

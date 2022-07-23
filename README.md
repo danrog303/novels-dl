@@ -17,6 +17,7 @@ They can also be easily converted to PDF format. The easiest way to do this is t
 - Log-in support (novelki.pl requires you to log in to download the content of any light novel)
 - Localization (depending on the system language, the script will display information in English or Polish)
 - Generation of an e-book as an .epub file
+- Option to generate a separate .epub file for each volume
 - Downloading basic metadata and embedding it in the .epub file
 - Downloading a cover image and embedding it in the .epub file
 - Generating a table of contents embedded in an .epub file
