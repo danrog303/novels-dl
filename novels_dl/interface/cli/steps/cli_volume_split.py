@@ -11,7 +11,7 @@ def cli_volume_split(context):
 
     result = -1
     while result not in [1, 2]:
-        result = input(Style.RESET_ALL + Style.BRIGHT + "Wybierz 1 lub 2: ")
+        result = input(Style.RESET_ALL + Style.BRIGHT + get_localization("UTIL_CHOOSE_1_2"))
         result = int(result) if result.isnumeric() else result
 
     print("\n" + Style.RESET_ALL)
